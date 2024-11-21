@@ -1,0 +1,155 @@
+<resources>
+    <string name="app_name">WildPaths</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titulo_def_home_content">Trilhos perto de sí</string>
+    <string name="titulo_def_trilho">Trilho sem titulo</string>
+    <string name="desc_def_img_trilho">Foto Trilho</string>
+
+    <!--Pag Trilho Selecionado-->
+    <!--PT-->
+    <string name="titulo_desc_PT">Descrição</string>
+    <string name="titulo_comment_PT">Comentários</string>
+    <string name="hint_campo_conteudoComment_PT">Adicione um comentário...</string>
+    <string name="texto_bConfirmarComment_PT">Comentar</string>
+    <string name="aviso_loginTrilhoS_PT">Inicia Sessão para poder Comentar</string>
+
+    <!--EN-->
+    <string name="titulo_desc_EN">Description</string>
+    <string name="titulo_comment_EN">Comments</string>
+    <string name="hint_campo_conteudoComment_EN">Add a comment...</string>
+    <string name="texto_bConfirmarComment_EN">Comment</string>
+    <string name="aviso_loginTrilhoS_EN">You must be logged in to post a comment</string>
+
+    <!--NavBar-->
+    <!--PT-->
+    <string name="titulo_opCriar_PT">Criar</string>
+    <string name="titulo_opTrilhos_PT">Trilhos</string>
+    <string name="titulo_opPerfil_PT">Perfil</string>
+    <!--EN-->
+    <string name="titulo_opCriar_EN">Create</string>
+    <string name="titulo_opTrilhos_EN">Trails</string>
+    <string name="titulo_opPerfil_EN">Profile</string>
+
+    <!--Textos Globais - Conta-->
+    <!--PT-->
+    <string name="titulo_campo_guardarSessão_PT">Guardar sessão</string>
+    <!--EN-->
+    <string name="titulo_campo_guardarSessão_EN">Remember me</string>
+
+    <!--Textos Login-->
+    <!--Titulo Pagina Login-->
+    <!--PT-->
+    <string name="titulo_pagLogin_PT">Iniciar Sessão</string>
+    <!--EN-->
+    <string name="titulo_pagLogin_EN">Login</string>
+
+    <!--Campos-->
+    <!--PT-->
+    <string name="titulo_campo_user_PT">Nome Utilizador/Email</string>
+    <string name="hint_campo_user_PT">ex.:Antonio</string>
+    <string name="titulo_campo_pw_PT">Palavra Passe</string>
+    <!--EN-->
+    <string name="titulo_campo_user_EN">Username/Email</string>
+    <string name="titulo_campo_pw_EN">Password</string>
+    <string name="hint_campo_user_EN">Jhon</string>
+    <!--UNI-->
+    <string name="hint_campo_pw">ex.:13414</string>
+
+    <!--AvisosLogin-->
+    <!--PT-->
+    <string name="aviso_dadosErrados_PT">O nome de utilizador ou a palavra passe está incorreto</string>
+    <string name="aviso_dadaosIncompletos_PT">Preencha todos os campos</string>
+    <string name="aviso_noUsername_PT">Preencha o campo de nome de utilizador</string>
+    <string name="aviso_noPw_PT">Preencha o campo da palavra passe</string>
+
+    <!--EN-->
+    <string name="aviso_dadosErrados_EN">Username or password incorrect</string>
+    <string name="aviso_dadaosIncompletos_EN">Fill in all fields</string>
+
+    <!--Textos Butao Login-->
+    <!--PT-->
+    <string name="texto_bLogin_PT">Entrar</string>
+    <!--EN-->
+    <string name="texto_bLogin_EN">Login</string>
+
+    <!--Textos BCriar uma Conta-->
+    <!--PT-->
+    <string name="texto_bCriarUser_PT">Criar uma conta</string>
+    <!--EN-->
+    <string name="texto_bCriarUser_EN">Create an Account</string>
+
+    <!--Textos RegistoConta-->
+    <!--Titulo Pagina Registo Conta-->
+    <!--PT-->
+    <string name="titulo_pagRegUser_PT">Regista-te</string>
+    <!--EN-->
+    <string name="titulo_pagRegUser_EN">Sign Up</string>
+
+    <!--Hints dos campos de Registo-->
+    <!--PT-->
+    <string name="hint_campo_userReg_PT">Nome Utilizador</string>
+    <string name="hint_campo_pwReg_PT">Palavra Passe </string>
+    <string name="hint_campo_pwRegConf_PT">Confirmar Palavra Passe </string>
+    <!--EN-->
+    <string name="hint_campo_userReg_EN">Username</string>
+    <string name="hint_campo_pwReg_EN">Password</string>
+    <string name="hint_campo_pwRegConf_EN">Confirm Password</string>
+    <!--UNI-->
+    <string name="hint_campo_emailReg">Email</string>
+
+    <!--Textos Butão Efetuar Registo-->
+    <!--PT-->
+    <string name="texto_bEfetuarReg_PT">Criar conta</string>
+    <!--EN-->
+    <string name="texto_bEfetuarReg_EN">Create Account</string>
+
+    <!--Avisos Efeutar Registo-->
+    <!--PT-->
+    <string name="aviso_dadosIncompletos_PT">Verifique se todos os campos estão preenchidos</string>
+    <string name="aviso_nomeUtilizador_PT">O nome de utilizador já existe</string>
+    <string name="aviso_email_PT">O endereço de email já está em uso </string>
+    <string name="aviso_passwordNoMatch_PT">As palavras-passe não coincidem</string>
+    <string name="aviso_geralCampoVazio_PT">Campo obrigatorio</string>
+    <string name="titulo_campoUserNameReg_PT">Nome de utilizador</string>
+
+    <!--EN-->
+    <string name="aviso_dadosIncompletos_EN">Make sure all fields are filled in</string>
+    <string name="aviso_nomeUtilizador_EN">The username is already in use</string>
+    <string name="aviso_email_EN">The email adress is already in use</string>
+    <string name="aviso_passwordNoMatch_EN">The passwords do not match</string>
+    <string name="aviso_geralCampoVazio_EN">Required field</string>
+    <string name="titulo_campoUserNameReg_EN">Username</string>
+
+    <!--UNI-->
+    <string name="titulo_campoEmailReg">Email</string>
+
+
+    <!--Pagina Perfil Utilizador-->
+    <!--PT-->
+    <string name="texto_bMeusTrilhos_PT">Publicações</string>
+    <string name="texto_bTrilhosFav_PT">Favoritos</string>
+    <string name="titulo_pagLogedInBio_PT">Sobre mim</string>
+    <string name="texto_descDefaultPerfil_PT">Olá esta é a minha conta no WildPaths</string>
+    <!--EN-->
+    <string name="texto_bMeusTrilhos_EN">Trails</string>
+    <string name="texto_bTrilhosFav_EN">Favorites</string>
+    <string name="texto_descDefaultPerfil_EN">Hi this is my profile on WildPaths</string>
+    <string name="titulo_pagLogedInBio_EN">About me</string>
+
+    <!--Pagina Criar Trilho-->
+    <!--PT-->
+    <string name="titulo_PagCriar_PT">Criar Trilho</string>
+    <string name="titulo_campoNomeTrilho_PT">Titulo do Trilho</string>
+    <string name="titulo_campoDistanciaTrilho_PT">Distancia total</string>
+    <string name="titulo_campoDescricao_PT">Descrição do Trilho</string>
+    <string name="texto_bRgistarTrilho_PT">Publicar Trilho</string>
+
+    <!--EN-->
+    <string name="titulo_PagCriar_EN">Create a Trail</string>
+    <string name="titulo_campoNomeTrilho_EN">Trail Title</string>
+    <string name="titulo_campoDistanciaTrilho_EN">Total Distance</string>
+    <string name="titulo_campoDescricao_EN">Trail Description</string>
+    <string name="texto_bRgistarTrilho_EN">Publish Trail</string>
+
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:screenOrientation="portrait"
+    android:id="@+id/ecra"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/pagMaeHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--BlogOut-->
+        <ImageButton
+            android:id="@+id/bLogOut"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/logout" />
+
+        <!--Logo-->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="167dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logo"
+            android:contentDescription="@string/desc_def_img_trilho"
+           />
+
+        <!--Butão definições (COLOCAR ANIMAÇÃO AO CLICAR)-->
+        <ImageButton
+            android:id="@+id/bLangMain"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/blue"/>
+
+        <!--Conteudo Holder-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conteudoPaginas"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/navBar"
+            android:layout_below="@id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="0dp"
+            />
+
+        <!--Menu de navegação-->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:background="@color/translucidBlack"
+            android:backgroundTint="@color/translucidBlack"
+            app:itemIconTint="@xml/nav_bar_selector"
+            app:itemRippleColor="@color/black"
+            app:itemTextColor="@xml/nav_bar_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintVertical_bias="1.0"
+            app:menu="@menu/nav_bar" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

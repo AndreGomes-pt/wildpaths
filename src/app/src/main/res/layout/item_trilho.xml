@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/infoTHolder"
+    android:onClick="trilhoSelecionado"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@xml/border_fragment"
+    android:orientation="vertical">
+
+    <!--Imagem Trilho-->
+    <ImageView
+        android:id="@+id/imgTrilho"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Titulo Trilho-->
+        <TextView
+            android:id="@+id/tituloTrilho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="8dp"
+            android:text="Trilho"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <!--Distancia(Km)-->
+        <TextView
+            android:id="@+id/distanciaTrilho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/tituloTrilho"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:text="0km"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <!--Categoria Percurso-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Icon Caminhada-->
+        <ImageView
+            android:id="@+id/iconPé"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/cat_trilho_walk"
+            android:backgroundTint="@color/black" />
+
+        <!--Icon Bicicleta-->
+        <ImageView
+            android:id="@+id/iconBike"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/cat_trilho_bike"
+            android:backgroundTint="@color/black" />
+
+        <!--Icon MotoCross-->
+        <ImageView
+            android:id="@+id/iconMotoCross"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/cat_trihlo_cross"
+            android:backgroundTint="@color/black" />
+
+        <!--Icon MotoQuatro-->
+        <ImageView
+            android:id="@+id/iconMotoQuatro"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/cat_trilho_quad"
+            android:backgroundTint="@color/black" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

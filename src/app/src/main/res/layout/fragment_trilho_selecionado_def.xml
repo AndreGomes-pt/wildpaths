@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".trilhos.selecionado.TrilhoSelecionado">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/conteudoTrilhoSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!--Mapa do trilho e fotos do mesmo-->
+            <HorizontalScrollView
+                android:id="@+id/mapNphotoHolder"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!--Mapa-->
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/mapaCriacaoDef"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/imgHolderCriar"
+                        android:layout_below="@id/campoDistanciaTrilho" />
+
+                    <!--1ºFoto do trilho-->
+                    <ImageView
+                        android:id="@+id/imgTrilhoS_1"
+                        android:layout_width="415dp"
+                        android:layout_height="match_parent" />
+
+                    <!--2ºFoto do trilho-->
+                    <ImageView
+                        android:id="@+id/imgTrilhoS_2"
+                        android:layout_width="415dp"
+                        android:layout_height="match_parent"/>
+
+                    <!--3ºFoto do trilho-->
+                    <ImageView
+                        android:id="@+id/imgTrilhoS_3"
+                        android:layout_width="415dp"
+                        android:layout_height="match_parent"/>
+
+                    <!--4ºFoto do trilho-->
+                    <ImageView
+                        android:id="@+id/imgTrilhoS_4"
+                        android:layout_width="415dp"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!--Titulo Trilho-->
+            <TextView
+                android:id="@+id/tituloTrilhoS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mapNphotoHolder"
+                android:layout_marginTop="10dp"
+                android:text="@string/titulo_def_trilho"
+                android:textSize="50px" />
+
+            <!--Distancia(Km)-->
+            <TextView
+                android:id="@+id/distanciaTrilhoS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tituloTrilhoS"
+                android:layout_alignRight="@id/tituloTrilhoS"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="0km"
+                />
+
+            <!--Categoria Percurso-->
+            <LinearLayout
+                android:id="@+id/catgTrilho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloTrilhoS"
+                android:orientation="horizontal">
+
+                <!--Icon Caminhada-->
+                <ImageView
+                    android:id="@+id/iconPéS"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/cat_trilho_walk"
+                    android:backgroundTint="@color/black" />
+
+                <!--Icon Bicicleta-->
+                <ImageView
+                    android:id="@+id/iconBikeS"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/cat_trilho_bike"
+                    android:backgroundTint="@color/black" />
+
+                <!--Icon MotoCross-->
+                <ImageView
+                    android:id="@+id/iconMotoCrossS"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/cat_trihlo_cross"
+                    android:backgroundTint="@color/black" />
+
+                <!--Icon MotoQuatro-->
+                <ImageView
+                    android:id="@+id/iconMotoQuatroS"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/cat_trilho_quad"
+                    android:backgroundTint="@color/black" />
+
+            </LinearLayout>
+
+            <!--Titulo Descrição-->
+            <TextView
+                android:id="@+id/tituloDescricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/catgTrilho"
+                android:textColor="@color/black"
+                android:text="@string/titulo_desc_PT"/>
+
+            <!--Descrição do Trilho-->
+            <TextView
+                android:id="@+id/descricaoTrilho"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloDescricao"
+                android:text="Descriçaõ Aqui" />
+
+            <!--Titulo Comentarios-->
+            <TextView
+                android:id="@+id/tituloComentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descricaoTrilho"
+                android:textColor="@color/black"
+                android:text="@string/titulo_comment_PT" />
+            
+            <!--Aviso de sessao nao inciada -->
+            <TextView
+                android:id="@+id/avisoLoginTrilhoSelecionado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloComentarios"
+                android:text="No sessao crlh"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

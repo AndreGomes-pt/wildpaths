@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".perfil.PerfilFragment" >
+
+<!--Scroll principal-->
+ <ScrollView
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:scrollbars="none">
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+          <!--Nome do Utilzizador-->
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/perfil_userName"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="1dp"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentTop="true"
+              android:textColor="@color/black"
+              android:background="@android:color/transparent" />
+
+          <!--Butão editar perfil-->
+          <Button
+              android:id="@+id/bEditarPerfil"
+              android:layout_width="25dp"
+              android:layout_height="25dp"
+              android:layout_marginTop="5dp"
+              android:layout_alignParentRight="true"
+              android:backgroundTint="@color/white"
+              android:background="@drawable/edit" />
+
+          <!--Foto Background e Foto perfil-->
+          <androidx.cardview.widget.CardView
+              android:id="@+id/imgLogedInHolder"
+              android:layout_width="match_parent"
+              android:layout_height="300dp"
+              android:layout_below="@id/perfil_userName"
+              android:layout_marginTop="10dp" >
+
+              <!--Foto Background-->
+              <ImageView
+                  android:id="@+id/imgPerfilBackground"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:onClick="selecImgGaleria"
+                  android:enabled="false"/>
+
+              <!--Foto Utilizador-->
+              <de.hdodenhof.circleimageview.CircleImageView
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:id="@+id/imgPerfilLogedIn"
+                  android:layout_width="200dp"
+                  android:layout_height="200dp"
+                  android:layout_marginBottom="10dp"
+                  android:layout_marginTop="10dp"
+                  android:layout_gravity="center"
+                  android:onClick="selecImgGaleria"
+                  android:enabled="false" />
+
+          </androidx.cardview.widget.CardView>
+
+          <!--Bio/Sobre mim-->
+          <!--Titulo do sobre mim-->
+          <TextView
+              android:id="@+id/perfil_bioTitulo"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/imgLogedInHolder"
+              android:text="@string/titulo_pagLogedInBio_PT"
+              android:textColor="@color/black" />
+
+          <!--Bio-->
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/perfil_bio"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/perfil_bioTitulo"
+              android:textColor="@color/white"
+              android:background="@android:color/transparent" />
+
+          <!--Opções-->
+          <LinearLayout
+              android:id="@+id/perfil_opcoesHolder"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/perfil_bio"
+              android:background="@xml/border_profilebs">
+
+              <!--Os meus trilhos-->
+              <Button
+                  android:id="@+id/perfil_bPublicacoes"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:text="@string/texto_bMeusTrilhos_PT"
+                  android:textColor="@color/black"
+                  android:background="@android:color/transparent" />
+
+              <!--Os meus trilhos favoritos-->
+              <Button
+                  android:id="@+id/perfil_bFavoritos"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:text="@string/texto_bTrilhosFav_PT"
+                  android:textColor="@color/black"
+                  android:background="@android:color/transparent" />
+
+          </LinearLayout>
+
+          <!--Conteudo (depende de qual butão ta selecionado)
+              Publicações
+              Favoritos
+              (Usar o adpatar dos trilhos so q so enviar para o adpater os dados dos trilhos q o user criou)-->
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/recyclerPerfil"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent"
+              android:layout_below="@id/perfil_opcoesHolder"
+              android:layout_marginTop="10dp"
+              tools:listitem="@layout/item_trilho"
+              tools:ignore="NotSibling"
+              app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+  </RelativeLayout>
+</ScrollView>
+</FrameLayout>

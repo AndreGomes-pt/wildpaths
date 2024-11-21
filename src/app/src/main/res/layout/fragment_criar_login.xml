@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Criar">
+
+    <RelativeLayout
+        android:id="@+id/pagCriar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!--Titulo Pagina-->
+        <TextView
+            android:id="@+id/tituloRegistoTrilho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/black"
+            android:text="REGISTO TRILHO" />
+
+        <!--Aviso Falha / Campos incompletos-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloRegistoTrilho"/>
+
+        <!--Titulo Campo Trilho-->
+        <TextView
+            android:id="@+id/tituloCampoTituloTrilho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/tituloRegistoTrilho"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:text="Titulo Trilho" />
+
+        <!--Campo Titulo Trilho-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/campoTituloTrilho"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloCampoTituloTrilho"
+            android:layout_centerHorizontal="true"
+            android:maxLength="50"
+            android:maxLines="2"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!--Titulo Campo Distancia-->
+        <TextView
+            android:id="@+id/tituloCampoDistanciaTrilho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/campoTituloTrilho"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:text="Km" />
+
+        <!--Campo Distancia-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/campoDistanciaTrilho"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloCampoDistanciaTrilho"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:inputType="numberDecimal"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!--Mapa-->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mapaCriacao"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/imgHolderCriar"
+            android:layout_below="@id/campoDistanciaTrilho" />
+
+        <!--Imagens Holder-->
+        <LinearLayout
+            android:id="@+id/imgHolderCriar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="170dp">
+
+            <ImageButton
+                android:id="@+id/bAdicionarImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/plus"
+                android:scaleType="fitXY"
+                android:onClick="selecImgGaleria" />
+
+            <ImageView
+                android:id="@+id/imgAdicionada1"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <ImageView
+                android:id="@+id/imgAdicionada2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/imgAdicionada3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/imgAdicionada4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/catgHolderCriar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="170dp"
+            android:layout_alignParentRight="true" >
+
+            <ImageButton
+                android:id="@+id/catgSelector1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/cat_trilho_walk"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/catgSelector2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/cat_trilho_bike"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/catgSelector3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/cat_trihlo_cross"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/catgSelector4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/cat_trilho_quad"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+
+        <!--Titulo Campo Descrição Trilho-->
+        <TextView
+            android:id="@+id/tituloCampoDescricaoTrilho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="155dp"
+            android:textColor="@color/black"
+            android:text="Descrição do Trilho" />
+
+        <!--Campo Descrição Trilho-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/campoDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:maxLength="200"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!--Butão Registar Trilho-->
+        <Button
+            android:id="@+id/bRegistoTrilho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="@xml/border_fragment"
+            tools:ignore="SpeakableTextPresentCheck" />
+          
+    </RelativeLayout>
+</FrameLayout>

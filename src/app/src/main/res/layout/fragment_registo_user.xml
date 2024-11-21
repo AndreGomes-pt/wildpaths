@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".perfil.RegistoUserFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".MainActivity"
+        android:id="@+id/perfilRegisto_holder">
+
+        <!--Titulo Pagina Registo-->
+        <TextView
+            android:id="@+id/tituloPagReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/titulo_pagRegUser_PT" />
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--Campos de Dados Necessarios-->
+            <!--Titulo campo do nome do utilizador-->
+            <TextView
+                android:id="@+id/tituloUserNameFieldReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/userNameFieldReg"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/black"
+                android:text="@string/titulo_campoUserNameReg_PT" />
+            <!--Nome utilizador-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userNameFieldReg"
+                android:layout_width="400px"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tituloUserNameFieldReg"
+                android:layout_marginBottom="5dp"
+                android:background="#71fcfcfc"
+                android:minHeight="28dp"
+                android:textColor="@color/black"
+                android:hint="@string/hint_campo_user_PT"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <!--Titulo campo do nome do email-->
+            <TextView
+                android:id="@+id/tituloEmailFieldReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/userNameFieldReg"
+                android:layout_marginBottom="2dp"
+                android:layout_below="@id/userNameFieldReg"
+                android:textColor="@color/black"
+                android:text="@string/titulo_campoEmailReg" />
+            <!--Email-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailFieldReg"
+                android:layout_width="400px"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloEmailFieldReg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:background="#71fcfcfc"
+                android:minHeight="28dp"
+                android:textColor="@color/black"
+                android:hint="@string/hint_campo_emailReg"
+                android:inputType="textEmailAddress"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <!--Titulo campo da pw-->
+            <TextView
+                android:id="@+id/tituloPwFieldReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/userNameFieldReg"
+                android:layout_marginBottom="2dp"
+                android:layout_below="@id/emailFieldReg"
+                android:textColor="@color/black"
+                android:text="@string/titulo_campo_pw_PT" />
+            <!--Password-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pwFieldReg"
+                android:layout_width="400px"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tituloPwFieldReg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/black"
+                android:hint="@string/hint_campo_pwReg_PT"
+                android:inputType="textPassword"
+                android:background="#71fcfcfc" />
+            <!--Password confirmação-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pwFieldRegConf"
+                android:layout_width="400px"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pwFieldReg"
+                android:layout_alignLeft="@id/pwFieldReg"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/black"
+                android:hint="@string/hint_campo_pwRegConf_PT"
+                android:inputType="textPassword"
+                android:background="#71fcfcfc" />
+
+            <!--Lembrar conta-->
+            <CheckBox
+                android:id="@+id/checkbox_lembrarContaReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pwFieldRegConf"
+                android:layout_centerHorizontal="true"
+                android:text="@string/titulo_campo_guardarSessão_PT" />
+
+
+
+            <!--Campo de avisos para o user-->
+            <TextView
+                android:id="@+id/avisosRegisto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkbox_lembrarContaReg"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="6dp"
+                android:textColor="@color/red"/>
+
+
+
+            <!--Butao Login-->
+            <!--Criar animação ao clicar no butao-->
+            <Button
+                android:id="@+id/bEfetuarRegisto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avisosRegisto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:background="@xml/border_fragment"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:id="@+id/perfilLogin_holder">
+
+    <!--Titulo Pagina Login-->
+    <TextView
+        android:id="@+id/tituloPagLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/titulo_pagLogin_PT" />
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <!--Titulo campo do nome do utilizador-->
+        <TextView
+            android:id="@+id/tituloUserNameField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/userNameField"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/black"
+            android:text="@string/titulo_campo_user_PT" />
+
+        <!--Campo do nome de utilizador-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userNameField"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloUserNameField"
+            android:layout_centerHorizontal="true"
+            android:background="#71fcfcfc"
+            android:minHeight="28dp"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!--Titulo campo da password do Utilizador-->
+        <TextView
+            android:id="@+id/tituloPWfield"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userNameField"
+            android:layout_alignLeft="@id/userNameField"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/black"
+            android:text="@string/titulo_campo_pw_PT"
+
+            />
+
+        <!--Campo de pw do user-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pwField"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tituloPWfield"
+            android:layout_alignLeft="@id/tituloPWfield"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:background="#71fcfcfc"
+            />
+
+        <!--Lembrar conta-->
+        <CheckBox
+            android:id="@+id/checkbox_lembrarConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwField"
+            android:layout_centerHorizontal="true"
+            android:text="@string/titulo_campo_guardarSessão_PT" />
+
+
+
+        <!--Campo de avisos para o user-->
+        <TextView
+            android:id="@+id/avisosLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkbox_lembrarConta"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="6dp"
+            android:textColor="@color/red"/>
+
+
+
+        <!--Butao Login-->
+        <!--Criar animação ao clicar no butao-->
+        <Button
+            android:id="@+id/bLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/avisosLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="@xml/border_fragment"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!--Texto cliclavel para criar uma conta-->
+        <TextView
+            android:id="@+id/bRegisto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/texto_bCriarUser_PT" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
